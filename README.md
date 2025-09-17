@@ -3,7 +3,7 @@ Trilha completa em Git e GitHub. Do zero ao avançado: fundamentos do controle d
 
 # Instalar o Git
 
-- Baixe o Git do [[site oficial]](https://git-scm.com/).
+- Baixe o Git do <a href="https://git-scm.com/" target="_blank">site oficial</a>.
 
 - Siga as instruções de instalação para o seu sistema operacional.
 
