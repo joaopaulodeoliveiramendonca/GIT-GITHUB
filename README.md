@@ -2,7 +2,7 @@ Trilha completa em **Git e GitHub**. Do zero ao avançado: fundamentos do contro
 
 # Instalar o Git
 
-- Baixe o Git do <a href="https://git-scm.com/" target="_blank">site oficial</a>.
+- Baixe o Git do [site oficial](https://git-scm.com/).
 
 - Siga as instruções de instalação para o seu sistema operacional.
 
@@ -65,7 +65,7 @@ git commit -m \"Mensagem do commit\"
 
 ## Criar uma conta no GitHub
 
-- Acesse [[GitHub](https://github.com/) e crie uma conta.
+- Acesse [GitHub](https://github.com/) e crie uma conta.
 
 - Escolha um nome de usuário único e uma senha forte.
 
