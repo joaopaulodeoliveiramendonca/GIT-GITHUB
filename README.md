@@ -53,7 +53,7 @@ git commit -m \"Mensagem do commit\"
 
 2.  Navegue até o diretório onde você deseja criar o repositório.
 
-3.  Execute **git it init** para iniciar o repositório.
+3.  Execute **git init** para iniciar o repositório.
 
 4.  Crie ou modifique um arquivo, por exemplo, um arquivo **README.md**.
 
