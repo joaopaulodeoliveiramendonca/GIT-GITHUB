@@ -53,33 +53,19 @@ git commit -m \"Mensagem do commit\"
 
 2.  Navegue até o diretório onde você deseja criar o repositório.
 
-3.  Execute
-   
-```bash
-git init
-```
-para iniciar o repositório.
+3.  Execute **git it init** para iniciar o repositório.
 
 4.  Crie ou modifique um arquivo, por exemplo, um arquivo **README.md**.
 
-5.  Execute
-6.  
-```bash
-git add README.md
-```
-para adicionar o arquivo ao estágio.
+5.  Execute **git add README.md** para adicionar o arquivo ao estágio.
 
-8.  Faça o commit com
-
-```bash
-git commit -m \"Primeiro commit\"
-```
+8.  Faça o commit com **git commit -m \"Primeiro commit\"**
 
 # Trabalhando com GitHub
 
 ## Criar uma conta no GitHub
 
-- Acesse [[GitHub]{.underline}](https://github.com/) e crie uma conta.
+- Acesse [[GitHub](https://github.com/) e crie uma conta.
 
 - Escolha um nome de usuário único e uma senha forte.
 
