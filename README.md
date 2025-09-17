@@ -1,5 +1,4 @@
-# GIT-GITHUB
-Trilha completa em Git e GitHub. Do zero ao avançado: fundamentos do controle de versão, comandos Git essenciais, branchs, merges, rebase, Git workflows, colaboração no GitHub, Pull Requests, integração contínua e melhores práticas. Todo código comentado para aprendizado prático.
+Trilha completa em **Git e GitHub**. Do zero ao avançado: fundamentos do controle de versão, comandos Git essenciais, branchs, merges, rebase, Git workflows, colaboração no GitHub, Pull Requests, integração e mais.
 
 # Instalar o Git
 
@@ -28,11 +27,10 @@ com outras pessoas de forma eficaz**.
 
 ## Comandos iniciais
 
+**Inicializa um novo repositório Git local.**
 ```bash
 git init
 ```
-
-- git init: Inicializa um novo repositório Git local.
 
 - git status: Verifica o status atual do repositório, mostrando
   > alterações feitas, arquivos não rastreados, etc.
