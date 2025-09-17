@@ -27,19 +27,25 @@ com outras pessoas de forma eficaz**.
 
 ## Comandos iniciais
 
-**Inicializa um novo repositório Git local.**
+Inicializa um novo repositório Git local.**
 ```bash
 git init
 ```
 
-- git status: Verifica o status atual do repositório, mostrando
-  > alterações feitas, arquivos não rastreados, etc.
+Verifica o status atual do repositório, mostrando alterações feitas, arquivos não rastreados, etc.
+```bash
+git status
+```
 
-- git add \<arquivo\>: Adiciona alterações ao índice (staging area) para
-  > preparação do commit.
+Adiciona alterações ao índice (staging area) para preparação do commit.
+```bash
+git add \<arquivo\>
+```
 
-- git commit -m \"Mensagem do commit\": Registra as alterações no
-  > repositório local.
+Registra as alterações no repositório local.
+```bash
+git commit -m \"Mensagem do commit\"
+```
 
 ## Criar seu primeiro repositório local
 
@@ -47,13 +53,27 @@ git init
 
 2.  Navegue até o diretório onde você deseja criar o repositório.
 
-3.  Execute **git init** para iniciar o repositório.
+3.  Execute
+   
+```bash
+git init
+```
+para iniciar o repositório.
 
 4.  Crie ou modifique um arquivo, por exemplo, um arquivo **README.md**.
 
-5.  Execute **git add README.md** para adicionar o arquivo ao estágio.
+5.  Execute
+6.  
+```bash
+git add README.md
+```
+para adicionar o arquivo ao estágio.
 
-6.  Faça o commit com git commit -m \"Primeiro commit\".
+8.  Faça o commit com
+
+```bash
+git commit -m \"Primeiro commit\"
+```
 
 # Trabalhando com GitHub
 
