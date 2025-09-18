@@ -559,35 +559,31 @@ git stash list
 
 Crie um arquivo no repositório em .github/workflows/test.yml:  
   
+# Para rodar os testes:
+
+```yaml
 name: Run Tests
 
-on: \[push\]
+on: 
+  push
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
 
-test:
+    steps:
+      - uses: actions/checkout@v2
 
-runs-on: ubuntu-latest
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-steps:
+      - name: Install dependencies
+        run: npm install
 
-\- uses: actions/checkout@v2
-
-\- name: Set up Node.js
-
-uses: actions/setup-node@v2
-
-with:
-
-node-version: \'14\'
-
-\- name: Install dependencies
-
-run: npm install
-
-\- name: Run tests
-
-run: npm test
+      - name: Run tests
+        run: npm test
 
 - Isso fará com que, toda vez que você enviar um push para o
   > repositório, o GitHub Actions execute os testes automaticamente.
@@ -620,32 +616,24 @@ run: npm test
   2.  Adicione um fluxo de trabalho para publicar o pacote. Exemplo de
       > configuração para publicar um pacote NPM:
 
+```yaml
 name: Publish Package
 
 on:
-
-push:
-
-branches:
-
-\- main
+  push:
+    branches:
+      - main
 
 jobs:
+  publish:
+    runs-on: ubuntu-latest
 
-publish:
+    steps:
+      - uses: actions/checkout@v2
 
-runs-on: ubuntu-latest
-
-steps:
-
-\- uses: actions/checkout@v2
-
-\- name: Publish package to GitHub
-
-run: \|
-
-npm publish \--access public
-
+      - name: Publish package to GitHub
+        run: |
+          npm publish --access public
 
 ## Segurança no GitHub
 
@@ -765,7 +753,7 @@ Exemplo para configurar o Git para tratar arquivos .txt com end_of_line
 
 Descrição breve do projeto.
 
-\## Como rodar o projeto:
+## Como rodar o projeto:
 
 1\. Clone o repositório.
 
