@@ -642,7 +642,6 @@ run: \|
 
 npm publish \--access public
 
-- 
 
 #### **6.4 Segurança no GitHub** {#segurança-no-github}
 
@@ -680,16 +679,16 @@ npm publish \--access public
       > caracteres por linha.
 
 **Exemplo**:  
-  
+
+```bash
 git commit -m \"Corrige erro no cálculo de preço\"
+```
 
 Se for necessário um corpo de mensagem:  
   
 git commit -m \"Corrige erro no cálculo de preço\" -m \"Esse erro
 ocorria quando a função de cálculo não considerava descontos
 acumulados.\"
-
-- 
 
 #### **7.2 Adotar convenções de branch** {#adotar-convenções-de-branch}
 
@@ -712,12 +711,14 @@ acumulados.\"
   > ser rastreados.
 
 Exemplo de um .gitignore para um projeto Node.js:  
-  
+
+```bash
 node_modules/
 
 \*.log
 
 .env
+```
 
 - Para criar um .gitignore, basta criar um arquivo chamado .gitignore na
   > raiz do repositório e adicionar as pastas ou arquivos que você
@@ -730,10 +731,10 @@ node_modules/
 
 Exemplo para configurar o Git para tratar arquivos .txt com end_of_line
 = lf:  
-  
-\*.txt text eol=lf
 
-- 
+```bash
+\*.txt text eol=lf
+```
 
 #### **7.5 Adotar um fluxo de trabalho** {#adotar-um-fluxo-de-trabalho}
 
@@ -767,8 +768,6 @@ Descrição breve do projeto.
 2\. Instale as dependências com \`npm install\`.
 
 3\. Rode o projeto com \`npm start\`.
-
-### 
 
 ###  **Revisão e Projeto Final** {#revisão-e-projeto-final}
 
@@ -816,11 +815,11 @@ Descrição breve do projeto.
 Após completar uma versão significativa do projeto, crie uma **tag**
 para marcar o ponto específico no tempo:
 
+```bash
 git tag -a v1.0 -m \"Versão 1.0\"
 
 git push origin v1.0
-
-- 
+```
 
 - Crie uma **Release** no GitHub com a tag e adicione notas de versão.
 
