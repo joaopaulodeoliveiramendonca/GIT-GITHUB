@@ -1,11 +1,5 @@
 Trilha completa em **Git e GitHub**. Do zero ao avançado: fundamentos do controle de versão, comandos Git essenciais, branchs, merges, rebase, Git workflows, colaboração no GitHub, Pull Requests, integração e mais.
 
-# Instalar o Git
-
-- Baixe o Git do [site oficial](https://git-scm.com/).
-
-- Siga as instruções de instalação para o seu sistema operacional.
-
 # O que é controle de versão?
 
 Controle de versão é um **sistema que registra as alterações feitas em
@@ -14,6 +8,10 @@ você **volte para versões anteriores**, **compare alterações e colabore
 com outras pessoas de forma eficaz**.
 
 # Conceitos básicos
+
+- **Git**: é um sistema de controlo de versão distribuído e de código aberto que permite aos utilizadores acompanhar as alterações feitas em ficheiros, coordenar o trabalho de várias pessoas em projetos de código e voltar a versões anteriores sempre que necessário. É como uma máquina do tempo para código, que guarda "fotografias" (commits) do estado do projeto, permitindo o trabalho eficiente e seguro em equipa, mesmo quando se está offline.
+
+- **GitHub**: é uma plataforma de desenvolvimento baseada na nuvem que usa o sistema de controle de versão Git para hospedar, compartilhar e gerenciar projetos de software. Ele permite que as equipes colaborem no código, acompanhem alterações através de repositórios e utilizem ferramentas como issues e pull requests para gerir projetos e garantir um fluxo de trabalho eficiente, além de funcionar como uma rede social para desenvolvedores. 
 
 - **Repositório (repo)**: Local onde o código e o histórico de
   > alterações são armazenados.
@@ -24,6 +22,12 @@ com outras pessoas de forma eficaz**.
 - **Branch**: Ramificação que permite o desenvolvimento paralelo. O Git
   > cria uma linha de desenvolvimento, permitindo múltiplas versões do
   > código.
+
+# Instalar o Git
+
+- Baixe o Git do [site oficial](https://git-scm.com/).
+
+- Siga as instruções de instalação para o seu sistema operacional.
 
 # Comandos iniciais
 
