@@ -6,14 +6,14 @@ Trilha completa em **Git e GitHub**. Do zero ao avançado: fundamentos do contro
 
 - Siga as instruções de instalação para o seu sistema operacional.
 
-## O que é controle de versão?
+# O que é controle de versão?
 
 Controle de versão é um **sistema que registra as alterações feitas em
 um arquivo ou conjunto de arquivos ao longo do tempo**. Ele permite que
 você **volte para versões anteriores**, **compare alterações e colabore
 com outras pessoas de forma eficaz**.
 
-### Conceitos básicos
+# Conceitos básicos
 
 - **Repositório (repo)**: Local onde o código e o histórico de
   > alterações são armazenados.
@@ -25,7 +25,7 @@ com outras pessoas de forma eficaz**.
   > cria uma linha de desenvolvimento, permitindo múltiplas versões do
   > código.
 
-## Comandos iniciais
+# Comandos iniciais
 
 Inicializa um novo repositório Git local.**
 ```bash 
@@ -53,7 +53,7 @@ Exibe o histórico de commits do repositório.
 git log
 ```
 
-## Criar seu primeiro repositório local
+# Criar seu primeiro repositório local
 
 1.  Abra o terminal/linha de comando.
 
@@ -77,7 +77,7 @@ git log
 
 - Verifique seu e-mail para ativar a conta.
 
-### Instalar e configurar o GitHub CLI ou usar HTTPS/SSH
+## Instalar e configurar o GitHub CLI ou usar HTTPS/SSH
 
 - **Usando GitHub CLI (GitHub Command Line Interface)**:
 
@@ -210,12 +210,12 @@ Para voltar a um commit anterior no Git, você pode usar alguns comandos
 diferentes, dependendo de como deseja manipular seu histórico de
 commits. Aqui estão algumas opções:
 
-### Voltar para um commit anterior sem perder as mudanças locais
+## Voltar para um commit anterior sem perder as mudanças locais
 
 Se você quer voltar para um commit anterior e preservar suas alterações
 locais, você pode usar o comando git checkout ou git switch:
 
-#### **Usando git checkout:**
+## **Usando git checkout:**
 
 ```bash
 git checkout \<commit_hash\>
@@ -230,7 +230,7 @@ git checkout HEAD\~1
 Isso irá alterar o HEAD para o commit anterior. Se quiser voltar para
 dois commits anteriores, use HEAD\~2, e assim por diante.
 
-#### **Usando git switch:**
+## **Usando git switch:**
 
 ```bash
 git switch \--detach \<commit_hash\>
@@ -239,7 +239,7 @@ git switch \--detach \<commit_hash\>
 Isso também vai fazer você sair para um \"detached HEAD\" e permitir que
 você explore ou altere o commit, sem afetar o branch atual.
 
-### 2. Voltar para um commit anterior e criar uma nova branch
+## 2. Voltar para um commit anterior e criar uma nova branch
 
 Se você deseja voltar para um commit anterior e começar uma nova branch
 a partir desse ponto, você pode usar o seguinte comando:
@@ -248,25 +248,25 @@ a partir desse ponto, você pode usar o seguinte comando:
 git checkout -b \<nome_da_nova_branch\> \<commit_hash\>
 ```
 
-### 3. Voltar para um commit anterior e fazer um reset (perdendo as mudanças locais)
+## 3. Voltar para um commit anterior e fazer um reset (perdendo as mudanças locais)
 
 Se você quer voltar para um commit anterior e **descartar** todas as
 mudanças que foram feitas após esse commit, você pode usar o comando git
 reset.
 
-#### **Para um reset suave (mantém as mudanças no diretório de trabalho):**
+## **Para um reset suave (mantém as mudanças no diretório de trabalho):**
 
 ```bash
 git reset \--soft \<commit_hash\>
 ```
 
-#### **Para um reset misto (mantém as mudanças no diretório de trabalho, mas desfaz o staged area):**
+## **Para um reset misto (mantém as mudanças no diretório de trabalho, mas desfaz o staged area):**
 
 ```bash
 git reset \--mixed \<commit_hash\>
 ```
 
-#### **Para um reset hard (descarta todas as mudanças):**
+## **Para um reset hard (descarta todas as mudanças):**
 
 ```bash
 git reset \--hard \<commit_hash\>
@@ -275,7 +275,7 @@ git reset \--hard \<commit_hash\>
 Isso vai **limpar** todas as alterações no seu diretório de trabalho,
 retornando o repositório para o estado do commit fornecido.
 
-### 4. Voltar para um commit anterior e fazer um revert
+## 4. Voltar para um commit anterior e fazer um revert
 
 Se você quer \"desfazer\" um commit sem alterar o histórico do
 repositório, você pode usar o comando git revert. Isso cria um novo
@@ -286,7 +286,7 @@ histórico:
 git revert \<commit_hash\>
 ```
 
-### 5. Voltar para um commit anterior com o git reflog
+## 5. Voltar para um commit anterior com o git reflog
 
 Se você fez uma alteração recente (como um reset ou checkout) e quer
 voltar ao estado anterior, pode usar o git reflog para ver todas as
@@ -447,7 +447,7 @@ git push origin v1.0
   > **Releases**, o que ajuda a disponibilizar versões do seu código
   > para os outros.
 
-#### **5.1 Reescrevendo o histórico com git rebase e git cherry-pick** {#reescrevendo-o-histórico-com-git-rebase-e-git-cherry-pick}
+## Reescrevendo o histórico com git rebase e git cherry-pick
 
 - **git rebase**: Este comando permite reescrever o histórico de commits
   > de uma branch.
@@ -477,7 +477,7 @@ git cherry-pick \<hash-do-commit\>
 ```
 - 
 
-#### **5.2 Reset e Revert** {#reset-e-revert}
+## Reset e Revert
 
 - **git reset**: Usado para **desfazer commits**.
 
@@ -499,7 +499,7 @@ Exemplo:
 git revert \<hash-do-commit\>
 ```
 
-#### **5.3 Usando o git stash** {#usando-o-git-stash}
+## Usando o git stash
 
 - **git stash**: Permite guardar alterações temporárias para que você
   > possa mudar de branch sem perder seu trabalho atual.
@@ -522,7 +522,7 @@ Se você tiver várias alterações guardadas, pode listar com:
 git stash list
 ```
 
-#### **5.4 Git Hooks** {#git-hooks}
+## Git Hooks
 
 - **Git hooks** são scripts que o Git executa em eventos específicos,
   > como antes de um commit ou merge.
@@ -537,9 +537,9 @@ git stash list
   2.  Renomeie para pre-commit e adicione o script que você deseja
       > rodar.
 
-**GitHub Avançado**
+# GitHub Avançado
 
-#### **6.1 GitHub Actions** {#github-actions}
+## GitHub Actions
 
 - **GitHub Actions** são usadas para automatizar fluxos de trabalho
   > diretamente no GitHub, como rodar testes, construir o projeto ou
@@ -588,7 +588,7 @@ run: npm test
 - Isso fará com que, toda vez que você enviar um push para o
   > repositório, o GitHub Actions execute os testes automaticamente.
 
-#### **6.2 GitHub Projects** {#github-projects}
+## GitHub Projects
 
 - **GitHub Projects** é uma ferramenta de gestão de projetos que
   > organiza Issues e Pull Requests em quadros tipo Kanban.
@@ -603,7 +603,7 @@ run: npm test
   3.  Organize suas tarefas arrastando Issues e PRs para diferentes
       > colunas (ex: **To Do**, **In Progress**, **Done**).
 
-#### **6.3 GitHub Packages** {#github-packages}
+## GitHub Packages
 
 - **GitHub Packages** permite que você publique e armazene pacotes de
   > software (como bibliotecas, containers Docker, etc) diretamente no
@@ -643,7 +643,7 @@ run: \|
 npm publish \--access public
 
 
-#### **6.4 Segurança no GitHub** {#segurança-no-github}
+## Segurança no GitHub
 
 - **Tokens de Acesso Pessoal (PATs)**: São usados para autenticar seu
   > acesso ao GitHub via HTTPS. É altamente recomendado usar tokens no
@@ -663,9 +663,9 @@ npm publish \--access public
   3.  Defina regras, como exigir aprovação de pull requests, status de
       > CI, etc.
 
-### **Boas Práticas**
+# Boas Práticas
 
-#### **7.1 Escrever mensagens de commit claras** {#escrever-mensagens-de-commit-claras}
+## Escrever mensagens de commit claras
 
 - Mensagens de commit são essenciais para um histórico de código
   > compreensível.
@@ -678,7 +678,7 @@ npm publish \--access public
       > que ela foi feita e o que foi alterado. Deve ter menos de 72
       > caracteres por linha.
 
-**Exemplo**:  
+## Exemplo
 
 ```bash
 git commit -m \"Corrige erro no cálculo de preço\"
@@ -690,7 +690,7 @@ git commit -m \"Corrige erro no cálculo de preço\" -m \"Esse erro
 ocorria quando a função de cálculo não considerava descontos
 acumulados.\"
 
-#### **7.2 Adotar convenções de branch** {#adotar-convenções-de-branch}
+## Adotar convenções de branch
 
 - Definir uma convenção de nomes para branches facilita a organização e
   > a colaboração.
@@ -705,7 +705,7 @@ acumulados.\"
 
   - **hotfix/**: Para correções urgentes (ex: hotfix/corrigir-api).
 
-#### **7.3 Criar e configurar o arquivo .gitignore** {#criar-e-configurar-o-arquivo-.gitignore}
+## Criar e configurar o arquivo .gitignore
 
 - O arquivo .gitignore informa ao Git quais arquivos ou pastas não devem
   > ser rastreados.
@@ -724,7 +724,7 @@ node_modules/
   > raiz do repositório e adicionar as pastas ou arquivos que você
   > deseja ignorar.
 
-#### **7.4 Entender o .gitattributes** {#entender-o-.gitattributes}
+## Entender o .gitattributes
 
 - O arquivo .gitattributes é usado para configurar como o Git lida com
   > certos tipos de arquivos, como finais de linha ou codificação.
@@ -736,7 +736,7 @@ Exemplo para configurar o Git para tratar arquivos .txt com end_of_line
 \*.txt text eol=lf
 ```
 
-#### **7.5 Adotar um fluxo de trabalho** {#adotar-um-fluxo-de-trabalho}
+## Adotar um fluxo de trabalho
 
 - **GitFlow**: Um fluxo de trabalho popular que usa as branches main,
   > develop, feature/, release/, e hotfix/.
@@ -745,7 +745,7 @@ Exemplo para configurar o Git para tratar arquivos .txt com end_of_line
   > em uma única branch (normalmente a main), com commits frequentes
   > para evitar divergências grandes.
 
-#### **7.6 Documentação no repositório** {#documentação-no-repositório}
+## Documentação no repositório
 
 - Sempre documente o seu repositório com um **README.md** explicando:
 
@@ -769,9 +769,9 @@ Descrição breve do projeto.
 
 3\. Rode o projeto com \`npm start\`.
 
-###  **Revisão e Projeto Final** {#revisão-e-projeto-final}
+# Revisão e Projeto Final
 
-#### **8.1 Criar um Projeto no GitHub** {#criar-um-projeto-no-github}
+## Criar um Projeto no GitHub
 
 - Escolha um projeto que você queira desenvolver e crie um repositório
   > para ele no GitHub.
@@ -786,7 +786,7 @@ Descrição breve do projeto.
   3.  Crie a estrutura inicial do projeto com arquivos básicos (por
       > exemplo, se for um projeto em Node.js, inicie com package.json).
 
-#### **8.2 Usar branches, PRs, Issues e Actions** {#usar-branches-prs-issues-e-actions}
+## Usar branches, PRs, Issues e Actions
 
 - Comece a trabalhar em uma **feature** criando uma branch específica
   > (feature/nome-da-feature).
@@ -800,7 +800,7 @@ Descrição breve do projeto.
   > workflow simples para rodar testes sempre que um push for feito no
   > repositório.
 
-#### **8.3 Colaborar com outras pessoas** {#colaborar-com-outras-pessoas}
+## Colaborar com outras pessoas
 
 - Se possível, colabore com outra pessoa em seu projeto ou crie uma
   > conta alternativa para simular a colaboração.
@@ -810,7 +810,7 @@ Descrição breve do projeto.
 
 - Caso haja conflitos de merge, resolva-os e finalize o merge.
 
-#### **8.4 Trabalhar com Tags e Releases** {#trabalhar-com-tags-e-releases}
+## Trabalhar com Tags e Releases
 
 Após completar uma versão significativa do projeto, crie uma **tag**
 para marcar o ponto específico no tempo:
@@ -823,7 +823,7 @@ git push origin v1.0
 
 - Crie uma **Release** no GitHub com a tag e adicione notas de versão.
 
-#### **8.5 Documentação e Licenciamento** {#documentação-e-licenciamento}
+# Documentação e Licenciamento
 
 - **README.md**: Faça uma documentação completa do projeto, explicando
   > como configurá-lo, usá-lo e contribuir.
