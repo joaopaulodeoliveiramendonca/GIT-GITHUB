@@ -28,7 +28,7 @@ com outras pessoas de forma eficaz**.
 ## Comandos iniciais
 
 Inicializa um novo repositório Git local.**
-```bash
+```bash 
 git init
 ```
 
@@ -45,6 +45,12 @@ git add \<arquivo\>
 Registra as alterações no repositório local.
 ```bash
 git commit -m \"Mensagem do commit\"
+```
+
+Exibe o histórico de commits do repositório.
+
+```bash
+git log
 ```
 
 ## Criar seu primeiro repositório local
@@ -79,8 +85,9 @@ git commit -m \"Mensagem do commit\"
 
 Configure o GitHub CLI no terminal com:
 
-| **gh auth login** |
-|-------------------|
+```bash
+gh auth login
+```
 
 2.  Escolha o GitHub.com e o método de autenticação (HTTPS ou SSH).
 
@@ -99,19 +106,10 @@ Configure o GitHub CLI no terminal com:
 Abra o terminal e configure seu nome de usuário e e-mail para vincular o
 Git ao seu GitHub:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>git config --global user.name "Seu Nome"<br />
-git config --global user.email "seuemail@example.com"</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+```bash
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@example.com"
+```
 
 - Essa configuração será usada para associar suas alterações aos commits
   > feitos no repositório GitHub.
@@ -137,20 +135,23 @@ git config --global user.email "seuemail@example.com"</th>
 No terminal, dentro do diretório do seu repositório local, adicione o
 repositório remoto:
 
-| git remote add origin https://github.com/\... |
-|-----------------------------------------------|
+```bash
+git remote add origin https://github.com/\
+```
 
 Para enviar seu código local para o GitHub, use o comando:
 
-| **git push -u origin main** |
-|-----------------------------|
+```bash
+git push -u origin main
+```
 
 Caso o repositório já tenha sido inicializado com um **README.md**, você
 pode fazer o comando **git pull** antes para sincronizar os arquivos e
 evitar conflitos.
 
-| git pull origin main |
-|----------------------|
+```bash 
+git pull origin main
+```
 
 ## Entendendo a diferença entre repositório local e remoto
 
@@ -168,19 +169,28 @@ simultaneamente.
 
 Para criar uma nova branch, use:
 
-| **git branch nome-da-branch** |
-|-------------------------------|
+```bash
+git branch nome-da-branch
+```bash 
 
 Para mudar para essa branch:
 
-| git checkout nome-da-branch |
-|-----------------------------|
+```bash
+git checkout nome-da-branch
+```
+
+Para ver em qual branch você está no Git, o comando é:
+
+```bash
+git branch
+```
 
 Alternativamente, você pode criar e mudar de branch com um único
 comando:
 
-| git checkout -b nome-da-branch |
-|--------------------------------|
+```bash
+git checkout -b nome-da-branch
+```
 
 ## Comitar mudanças em branches diferentes
 
@@ -188,19 +198,10 @@ comando:
 
 Adicione e faça o commit das mudanças normalmente.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>git add &lt;arquivo&gt;<br />
-git commit -m "Mensagem do commit"</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+```bash
+git add .
+git commit -m "Mensagem do commit"
+```
 
 - Isso vai garantir que as alterações sejam registradas na branch em que
   > você está trabalhando.
@@ -216,30 +217,38 @@ locais, você pode usar o comando git checkout ou git switch:
 
 #### **Usando git checkout:**
 
+```bash
 git checkout \<commit_hash\>
+```
 
 Ou, se você deseja voltar para um commit anterior:
 
+```bash
 git checkout HEAD\~1
+```
 
 Isso irá alterar o HEAD para o commit anterior. Se quiser voltar para
 dois commits anteriores, use HEAD\~2, e assim por diante.
 
 #### **Usando git switch:**
 
+```bash
 git switch \--detach \<commit_hash\>
+```
 
 Isso também vai fazer você sair para um \"detached HEAD\" e permitir que
 você explore ou altere o commit, sem afetar o branch atual.
 
-### 2. Voltar para um commit anterior e criar uma nova branch {#voltar-para-um-commit-anterior-e-criar-uma-nova-branch}
+### 2. Voltar para um commit anterior e criar uma nova branch
 
 Se você deseja voltar para um commit anterior e começar uma nova branch
 a partir desse ponto, você pode usar o seguinte comando:
 
+```bash
 git checkout -b \<nome_da_nova_branch\> \<commit_hash\>
+```
 
-### 3. Voltar para um commit anterior e fazer um reset (perdendo as mudanças locais) {#voltar-para-um-commit-anterior-e-fazer-um-reset-perdendo-as-mudanças-locais}
+### 3. Voltar para um commit anterior e fazer um reset (perdendo as mudanças locais)
 
 Se você quer voltar para um commit anterior e **descartar** todas as
 mudanças que foram feitas após esse commit, você pode usar o comando git
@@ -247,47 +256,55 @@ reset.
 
 #### **Para um reset suave (mantém as mudanças no diretório de trabalho):**
 
+```bash
 git reset \--soft \<commit_hash\>
+```
 
 #### **Para um reset misto (mantém as mudanças no diretório de trabalho, mas desfaz o staged area):**
 
+```bash
 git reset \--mixed \<commit_hash\>
+```
 
 #### **Para um reset hard (descarta todas as mudanças):**
 
+```bash
 git reset \--hard \<commit_hash\>
+```
 
 Isso vai **limpar** todas as alterações no seu diretório de trabalho,
 retornando o repositório para o estado do commit fornecido.
 
-### 4. Voltar para um commit anterior e fazer um revert {#voltar-para-um-commit-anterior-e-fazer-um-revert}
+### 4. Voltar para um commit anterior e fazer um revert
 
 Se você quer \"desfazer\" um commit sem alterar o histórico do
 repositório, você pode usar o comando git revert. Isso cria um novo
 commit que desfaz as alterações do commit anterior, mas preserva o
 histórico:
 
+```bash
 git revert \<commit_hash\>
+```
 
-### 5. Voltar para um commit anterior com o git reflog {#voltar-para-um-commit-anterior-com-o-git-reflog}
+### 5. Voltar para um commit anterior com o git reflog
 
 Se você fez uma alteração recente (como um reset ou checkout) e quer
 voltar ao estado anterior, pode usar o git reflog para ver todas as
 mudanças recentes no seu HEAD e retornar a um ponto anterior.
 
 Veja o histórico de ações do seu HEAD:  
-  
+
+```bash
 git reflog
+```
 
-1.  
+1.  Para voltar a um commit anterior mostrado no reflog:  
 
-Para voltar a um commit anterior mostrado no reflog:  
-  
+```bash
 git checkout \<reflog_commit_hash\>
+```
 
-2.  
-
-Esses são os métodos mais comuns para voltar a um commit anterior.
+2.  Esses são os métodos mais comuns para voltar a um commit anterior.
 Dependendo da situação, escolha o comando que melhor se adapta ao seu
 caso!
 
@@ -298,13 +315,15 @@ caso!
 
 Primeiro, mude para a branch principal:
 
-| git checkout main |
-|-------------------|
+```bash
+git checkout main
+```
 
 Em seguida, faça o merge da sua branch de trabalho:
 
-| git merge nome-da-branch |
-|--------------------------|
+```bash
+git merge nome-da-branch
+```
 
 ## Resolver conflitos de merge
 
@@ -315,26 +334,18 @@ O Git irá marcar o arquivo com um conflito. Você precisará abrir o
 arquivo, resolver o conflito e, então, adicionar e fazer o commit
 novamente:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>git add &lt;arquivo&gt;<br />
-git commit -m "Resolvendo conflito"</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+```bash
+git add .
+git commit -m "Resolvendo conflito"
+```
 
 ## Clonar repositórios existentes
 
 Para clonar um repositório do GitHub para o seu computador:
 
-| git clone https://github.com/seunomeusuario/nomedorepositorio.git |
-|-------------------------------------------------------------------|
+```bash
+git clone https://github.com/seunomeusuario/nomedorepositorio.git
+```
 
 - Isso cria uma cópia completa do repositório remoto em seu computador.
 
@@ -342,8 +353,9 @@ Para clonar um repositório do GitHub para o seu computador:
 
 Para baixar (ou \"puxar\") alterações do repositório remoto:
 
-| git pull origin main |
-|----------------------|
+```bash
+git pull origin main
+```
 
 - Isso traz as últimas mudanças do repositório remoto para o seu
   > repositório local.
@@ -426,19 +438,10 @@ Quando você revisar um PR, você pode aprová-lo ou rejeitá-lo:
 
 Para criar uma tag:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>git tag -a v1.0 -m "Versão 1.0"<br />
-git push origin v1.0</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+```bash
+git tag -a v1.0 -m "Versão 1.0"
+git push origin v1.0
+```
 
 - Você pode criar releases no GitHub diretamente na seção de
   > **Releases**, o que ajuda a disponibilizar versões do seu código
@@ -453,25 +456,25 @@ git push origin v1.0</th>
     > para o repositório remoto, combinando commits ou reorganizando-os.
 
 Exemplo básico de rebase:  
-  
+
+```bash
 git checkout feature-branch
 
 git rebase main
-
-- 
+```
 
 - Isso pega os commits da feature-branch e os coloca após os commits da
   > main.
 
-<!-- -->
 
 - **git cherry-pick**: Permite pegar um commit específico de outra
   > branch e aplicá-lo na branch atual.
 
-Exemplo:  
-  
-git cherry-pick \<hash-do-commit\>
+Exemplo: 
 
+```bash
+git cherry-pick \<hash-do-commit\>
+```
 - 
 
 #### **5.2 Reset e Revert** {#reset-e-revert}
@@ -480,21 +483,21 @@ git cherry-pick \<hash-do-commit\>
 
 **\--hard**: Remove as alterações do diretório de trabalho e do
 índice.  
-  
+
+```bash
 git reset \--hard HEAD\~1
+```
 
 - (Isso desfaz o último commit e todas as mudanças associadas a ele).
-
-<!-- -->
 
 - **git revert**: Cria um **novo commit** que desfaz as alterações de um
   > commit anterior, sem alterar o histórico.
 
 Exemplo:  
-  
-git revert \<hash-do-commit\>
 
-- 
+```bash
+git revert \<hash-do-commit\>
+```
 
 #### **5.3 Usando o git stash** {#usando-o-git-stash}
 
@@ -502,22 +505,22 @@ git revert \<hash-do-commit\>
   > possa mudar de branch sem perder seu trabalho atual.
 
 Para guardar alterações:  
-  
-git stash
 
-- 
+ ```bash
+git stash
+```
 
 Para recuperar as alterações guardadas:  
-  
-git stash apply
 
-- 
+```bash
+git stash apply
+```
 
 Se você tiver várias alterações guardadas, pode listar com:  
-  
-git stash list
 
-- 
+```bash
+git stash list
+```
 
 #### **5.4 Git Hooks** {#git-hooks}
 
@@ -581,10 +584,6 @@ run: npm install
 \- name: Run tests
 
 run: npm test
-
-- 
-
-<!-- -->
 
 - Isso fará com que, toda vez que você enviar um push para o
   > repositório, o GitHub Actions execute os testes automaticamente.
