@@ -17,7 +17,7 @@ com outras pessoas de forma eficaz**.
   > alterações são armazenados.
 
 - **Commit**: Cada alteração registrada no repositório, uma espécie de
-  > \"foto\" do código em um ponto específico.
+  > "foto" do código em um ponto específico.
 
 - **Branch**: Ramificação que permite o desenvolvimento paralelo. O Git
   > cria uma linha de desenvolvimento, permitindo múltiplas versões do
@@ -43,12 +43,12 @@ git status
 
 Adiciona alterações ao índice (staging area) para preparação do commit.
 ```bash
-git add \<arquivo\>
+git add <arquivo>
 ```
 
 Registra as alterações no repositório local.
 ```bash
-git commit -m \"Mensagem do commit\"
+git commit -m "Mensagem do commit"
 ```
 
 Exibe o histórico de commits do repositório.
@@ -69,7 +69,7 @@ git log
 
 5.  Execute **git add README.md** para adicionar o arquivo ao estágio.
 
-8.  Faça o commit com **git commit -m \"Primeiro commit\"**
+8.  Faça o commit com **git commit -m "Primeiro commit"**
 
 # Trabalhando com GitHub
 
@@ -99,8 +99,8 @@ gh auth login
 
   1.  Gere uma chave SSH com **ssh-keygen**.
 
-  2.  Adicione a chave SSH ao GitHub em **Settings \> SSH and GPG keys
-      > \> New SSH key**.
+  2.  Adicione a chave SSH ao GitHub em **Settings > SSH and GPG keys
+      > > New SSH key**.
 
 - **HTTPS**: Caso não queira usar SSH, pode configurar o GitHub para
   > usar HTTPS com sua senha/token.
@@ -120,7 +120,7 @@ git config --global user.email "seuemail@example.com"
 
 ## Criar um repositório no GitHub
 
-- No GitHub, clique em **New** no painel principal ou em **+ \> New
+- No GitHub, clique em **New** no painel principal ou em **+ > New
   > repository**.
 
 - Preencha os campos:
@@ -140,7 +140,7 @@ No terminal, dentro do diretório do seu repositório local, adicione o
 repositório remoto:
 
 ```bash
-git remote add origin https://github.com/\
+git remote add origin https://github.com/
 ```
 
 Para enviar seu código local para o GitHub, use o comando:
@@ -222,25 +222,25 @@ locais, você pode usar o comando git checkout ou git switch:
 ## **Usando git checkout:**
 
 ```bash
-git checkout \<commit_hash\>
+git checkout <commit_hash>
 ```
 
 Ou, se você deseja voltar para um commit anterior:
 
 ```bash
-git checkout HEAD\~1
+git checkout HEAD~1
 ```
 
 Isso irá alterar o HEAD para o commit anterior. Se quiser voltar para
-dois commits anteriores, use HEAD\~2, e assim por diante.
+dois commits anteriores, use HEAD~2, e assim por diante.
 
 ## **Usando git switch:**
 
 ```bash
-git switch \--detach \<commit_hash\>
+git switch --detach <commit_hash>
 ```
 
-Isso também vai fazer você sair para um \"detached HEAD\" e permitir que
+Isso também vai fazer você sair para um "detached HEAD" e permitir que
 você explore ou altere o commit, sem afetar o branch atual.
 
 ## 2. Voltar para um commit anterior e criar uma nova branch
@@ -249,7 +249,7 @@ Se você deseja voltar para um commit anterior e começar uma nova branch
 a partir desse ponto, você pode usar o seguinte comando:
 
 ```bash
-git checkout -b \<nome_da_nova_branch\> \<commit_hash\>
+git checkout -b <nome_da_nova_branch> <commit_hash>
 ```
 
 ## 3. Voltar para um commit anterior e fazer um reset (perdendo as mudanças locais)
@@ -261,19 +261,19 @@ reset.
 ## **Para um reset suave (mantém as mudanças no diretório de trabalho):**
 
 ```bash
-git reset \--soft \<commit_hash\>
+git reset --soft <commit_hash>
 ```
 
 ## **Para um reset misto (mantém as mudanças no diretório de trabalho, mas desfaz o staged area):**
 
 ```bash
-git reset \--mixed \<commit_hash\>
+git reset --mixed <commit_hash>
 ```
 
 ## **Para um reset hard (descarta todas as mudanças):**
 
 ```bash
-git reset \--hard \<commit_hash\>
+git reset --hard <commit_hash>
 ```
 
 Isso vai **limpar** todas as alterações no seu diretório de trabalho,
@@ -281,13 +281,13 @@ retornando o repositório para o estado do commit fornecido.
 
 ## 4. Voltar para um commit anterior e fazer um revert
 
-Se você quer \"desfazer\" um commit sem alterar o histórico do
+Se você quer "desfazer" um commit sem alterar o histórico do
 repositório, você pode usar o comando git revert. Isso cria um novo
 commit que desfaz as alterações do commit anterior, mas preserva o
 histórico:
 
 ```bash
-git revert \<commit_hash\>
+git revert <commit_hash>
 ```
 
 ## 5. Voltar para um commit anterior com o git reflog
@@ -305,7 +305,7 @@ git reflog
 1.  Para voltar a um commit anterior mostrado no reflog:  
 
 ```bash
-git checkout \<reflog_commit_hash\>
+git checkout <reflog_commit_hash>
 ```
 
 2.  Esses são os métodos mais comuns para voltar a um commit anterior.
@@ -355,7 +355,7 @@ git clone https://github.com/seunomeusuario/nomedorepositorio.git
 
 ## Trabalhando em colaboração
 
-Para baixar (ou \"puxar\") alterações do repositório remoto:
+Para baixar (ou "puxar") alterações do repositório remoto:
 
 ```bash
 git pull origin main
@@ -477,7 +477,7 @@ git rebase main
 Exemplo: 
 
 ```bash
-git cherry-pick \<hash-do-commit\>
+git cherry-pick <hash-do-commit>
 ```
 - 
 
@@ -485,11 +485,11 @@ git cherry-pick \<hash-do-commit\>
 
 - **git reset**: Usado para **desfazer commits**.
 
-**\--hard**: Remove as alterações do diretório de trabalho e do
+**--hard**: Remove as alterações do diretório de trabalho e do
 índice.  
 
 ```bash
-git reset \--hard HEAD\~1
+git reset --hard HEAD~1
 ```
 
 - (Isso desfaz o último commit e todas as mudanças associadas a ele).
@@ -500,7 +500,7 @@ git reset \--hard HEAD\~1
 Exemplo:  
 
 ```bash
-git revert \<hash-do-commit\>
+git revert <hash-do-commit>
 ```
 
 ## Usando o git stash
@@ -641,13 +641,13 @@ jobs:
   > acesso ao GitHub via HTTPS. É altamente recomendado usar tokens no
   > lugar de senhas.
 
-  1.  Para criar um token, vá em **Settings \> Developer settings \>
+  1.  Para criar um token, vá em **Settings > Developer settings >
       > Personal access tokens** no GitHub.
 
 - **Branch Protection Rules**: Impede que mudanças sejam feitas
   > diretamente na branch principal (ex: main).
 
-  1.  Vá para **Settings \> Branches**.
+  1.  Vá para **Settings > Branches**.
 
   2.  Em **Branch protection rules**, adicione uma regra para proteger a
       > branch principal.
@@ -673,14 +673,14 @@ jobs:
 ## Exemplo
 
 ```bash
-git commit -m \"Corrige erro no cálculo de preço\"
+git commit -m "Corrige erro no cálculo de preço"
 ```
 
 Se for necessário um corpo de mensagem:  
   
-git commit -m \"Corrige erro no cálculo de preço\" -m \"Esse erro
+git commit -m "Corrige erro no cálculo de preço" -m "Esse erro
 ocorria quando a função de cálculo não considerava descontos
-acumulados.\"
+acumulados."
 
 ## Adotar convenções de branch
 
@@ -707,7 +707,7 @@ Exemplo de um .gitignore para um projeto Node.js:
 ```bash
 node_modules/
 
-\*.log
+*.log
 
 .env
 ```
@@ -725,7 +725,7 @@ Exemplo para configurar o Git para tratar arquivos .txt com end_of_line
 = lf:  
 
 ```bash
-\*.txt text eol=lf
+*.txt text eol=lf
 ```
 
 ## Adotar um fluxo de trabalho
@@ -749,17 +749,17 @@ Exemplo para configurar o Git para tratar arquivos .txt com end_of_line
 
 **Exemplo básico de README.md**:  
   
-\# Nome do Projeto
+# Nome do Projeto
 
 Descrição breve do projeto.
 
 ## Como rodar o projeto:
 
-1\. Clone o repositório.
+1. Clone o repositório.
 
-2\. Instale as dependências com \`npm install\`.
+2. Instale as dependências com `npm install`.
 
-3\. Rode o projeto com \`npm start\`.
+3. Rode o projeto com `npm start`.
 
 # Revisão e Projeto Final
 
@@ -798,7 +798,7 @@ Descrição breve do projeto.
   > conta alternativa para simular a colaboração.
 
 - Faça mudanças em uma branch, submeta um PR e peça para seu
-  > \"colaborador\" revisar e aprovar.
+  > "colaborador" revisar e aprovar.
 
 - Caso haja conflitos de merge, resolva-os e finalize o merge.
 
@@ -808,7 +808,7 @@ Após completar uma versão significativa do projeto, crie uma **tag**
 para marcar o ponto específico no tempo:
 
 ```bash
-git tag -a v1.0 -m \"Versão 1.0\"
+git tag -a v1.0 -m "Versão 1.0"
 
 git push origin v1.0
 ```
