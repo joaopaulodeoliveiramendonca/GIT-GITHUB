@@ -584,7 +584,7 @@ jobs:
 
       - name: Run tests
         run: npm test
-
+```
 - Isso fará com que, toda vez que você enviar um push para o
   > repositório, o GitHub Actions execute os testes automaticamente.
 
@@ -634,7 +634,7 @@ jobs:
       - name: Publish package to GitHub
         run: |
           npm publish --access public
-
+```
 ## Segurança no GitHub
 
 - **Tokens de Acesso Pessoal (PATs)**: São usados para autenticar seu
