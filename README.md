@@ -1,4 +1,24 @@
-Trilha completa em **Git e GitHub**. Do zero ao avançado: fundamentos do controle de versão, comandos Git essenciais, branchs, merges, rebase, Git workflows, colaboração no GitHub, Pull Requests, integração e mais.
+# Complete Learning Path in Git and GitHub
+
+A complete journey from **zero to advanced**: version control fundamentals, essential Git commands, branches, merges, rebase, Git workflows, collaboration on GitHub, Pull Requests, integration, and more.
+
+This documentation covers everything you need to become proficient with **Git and GitHub**, from understanding how version control works to applying best practices for team collaboration and project management.
+
+## What You’ll Learn:
+- **Version Control Fundamentals**: Understanding how Git tracks and manages code changes.
+- **Essential Git Commands**: `init`, `clone`, `add`, `commit`, `push`, `pull`, and `status`.
+- **Branching and Merging**: Creating branches, merging changes, and resolving conflicts.
+- **Rebase and Advanced Commands**: Learning how to rewrite history safely and maintain a clean commit tree.
+- **Git Workflows**: Exploring strategies such as Git Flow, Feature Branch Workflow, and Forking Workflow.
+- **Collaboration on GitHub**: Managing repositories, collaborating through issues, and pull requests.
+- **Pull Requests and Code Review**: How to open, review, and merge pull requests effectively.
+- **Integration and Automation**: Connecting GitHub with CI/CD pipelines, project management tools, and more.
+
+---
+
+This learning path represents my complete study and documentation of **Git and GitHub**, serving as both a personal reference and a resource for others who want to master version control and collaborative development.
+
+Feel free to explore, practice, and contribute!
 
 # O que é controle de versão?
 
